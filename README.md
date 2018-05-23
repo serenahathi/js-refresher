@@ -1,6 +1,13 @@
 
 # JavaScript refresher: calculator
 
+## Summary
+A basic calculator application that can add, subtract, multiply and divide a series of numbers.
+
+## Demo
+
+Coming soon...
+
 ## Approach
 
 ### V1 - Calculator buttons
@@ -24,8 +31,13 @@
 ### V3 - Styling
 - Styling of calculator
 
-## Summary
-
-## Demo
-
 ## Quickstart
+
+- Clone the repository using the following command:
+
+```
+$ git clone https://github.com/serenahathi/js-refresher.git
+```
+
+- Open the index.html file in your browser of choice
+
