@@ -28,7 +28,7 @@ Coming soon...
 - Ability to perform calculations with numbers larger than 9
 - Ability to perform calculations with decimal numbers
 
-### V3 - Styling
+### V4 - Styling
 - Styling of calculator
 
 ## Quickstart
