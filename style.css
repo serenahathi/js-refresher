@@ -2,3 +2,36 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.numbers {
+  width: 50%;
+  height: 70%
+  /* display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto; */
+}
+
+.numbers>button {
+  /* width: 80 px;
+  height: 80 px */
+}
+
+.operators {
+  width: 10%;
+  height: 70%
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.operators button {
+  /* max-width: 80 px;
+  max-height: 80 px */
+}
