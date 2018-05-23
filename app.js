@@ -66,7 +66,4 @@ $(document).ready(function() {
         secondNumber = '';
     }
 
-    function clearValues(button) {
-        
-    }
 });
