@@ -41,3 +41,6 @@ $ git clone https://github.com/serenahathi/js-refresher.git
 
 - Open the index.html file in your browser of choice
 
+## Resources used
+
+- [FreeCodeCamp article](https://medium.freecodecamp.org/programming-a-calculator-8263966a8019)
