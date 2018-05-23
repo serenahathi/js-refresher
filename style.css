@@ -1,37 +1,64 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Courier New";
 }
 
-body {
+.calculator-body {
+  background-color: gray;
+  width: 50%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.buttons-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 20px;
+}
+
+.calculator-result-input {
+  height: 10%;
+  font-size: 50px;
+  text-align: right;
+  background-color: #F0F8FF;
+  margin: 40px;
+  margin-bottom: 20px;
+  padding-right: 25px
 }
 
 .numbers {
-  width: 50%;
-  height: 70%
-  /* display: flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto; */
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-right: 15px;
 }
 
-.numbers>button {
-  /* width: 80 px;
-  height: 80 px */
+#zero {
+  height: 80px;
+  grid-column: 1 / span 3;
+  width: 240px;
 }
-
 .operators {
-  width: 10%;
-  height: 70%
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
-.operators button {
-  /* max-width: 80 px;
-  max-height: 80 px */
+#clear-all {
+  height: 80px;
+  grid-column: 1 / span 2;
+  width: 160px;
+}
+
+button {
+  height: 80px;
+  width: 80px;
+  font-size: 50px;
 }
