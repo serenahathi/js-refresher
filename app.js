@@ -9,12 +9,12 @@ $(document).ready(function() {
         let button = e.target.innerHTML;
         if (button >= '0' && button <= 9) {
             handleNumber(button);
-            // console.log('number')
+            console.log('number')
         } else {
             handleOperator(button);
-            // console.log('operator')
+            console.log('operator')
         }
-        // console.log('e', e.target.innerHTML);
+        console.log('e', e.target.innerHTML);
     });
 
     function handleNumber(number) {
@@ -23,10 +23,16 @@ $(document).ready(function() {
         } else {
             secondNumber = number;
         }
+        displayButton(number)
     }
     
     function handleOperator(operator) {
-        calcOperation = operator
+        if (calcOperation === '') {
+            calcOperation = operator
+        } else {
+            handleTotal();
+            calcOperation = operator;
+        }
     }
 
 
