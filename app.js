@@ -9,12 +9,12 @@ $(document).ready(function() {
         let button = e.target.innerHTML;
         if (button >= '0' && button <= 9) {
             handleNumber(button);
-            // console.log('number')
+            console.log('number')
         } else {
             handleOperator(button);
-            // console.log('operator')
+            console.log('operator')
         }
-        // console.log('e', e.target.innerHTML);
+        console.log('e', e.target.innerHTML);
     });
 
     function handleNumber(number) {
@@ -23,11 +23,47 @@ $(document).ready(function() {
         } else {
             secondNumber = number;
         }
-    }
-    
-    function handleOperator(operator) {
-        calcOperation = operator
+        displayButton(number)
     }
 
+    function handleOperator(operator) {
+        if (calcOperation === '') {
+            calcOperation = operator
+        } else {
+            handleTotal();
+            calcOperation = operator;
+        }
+    }
+
+    function handleTotal() {
+        switch (calcOperation) {
+            case '+':
+                total = +firstNumber + +secondNumber;
+                displayButton(total);
+                break;
+            case '-':
+                total = +firstNumber - +secondNumber;
+                displayButton(total);
+                break;
+            case '/':
+                total = +firstNumber / +secondNumber;
+                displayButton(total);
+                break;
+            case '*':
+                total = +firstNumber * +secondNumber;
+                displayButton(total);
+                break;
+        }
+        updateVariables();
+    }
+
+    function displayButton(button) {
+        $('.calculator-result-input').text(button);
+    }
+
+    function updateVariables() {
+        firstNumber = total;
+        secondNumber = '';
+    }
 
 });
