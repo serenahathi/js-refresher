@@ -35,5 +35,38 @@ $(document).ready(function() {
         }
     }
 
+    function handleTotal() {
+        switch (calcOperation) {
+            case '+':
+                total = +firstNumber + +secondNumber;
+                displayButton(total);
+                break;
+            case '-':
+                total = +firstNumber - +secondNumber;
+                displayButton(total);
+                break;
+            case '/':
+                total = +firstNumber / +secondNumber;
+                displayButton(total);
+                break;
+            case '*':
+                total = +firstNumber * +secondNumber;
+                displayButton(total);
+                break;
+        }
+        updateVariables();
+    }   
 
+    function displayButton(button) {
+        $('.calculator-result-input').text(button);
+    }
+
+    function updateVariables() {
+        firstNumber = total;
+        secondNumber = '';
+    }
+
+    function clearValues(button) {
+        
+    }
 });
