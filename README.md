@@ -6,7 +6,9 @@ A basic calculator application that can add, subtract, multiply and divide a ser
 
 ## Demo
 
-Coming soon...
+View deployed version [here](http://babbel-neos-calculator.herokuapp.com/).
+
+<img src="https://giphy.com/gifs/7Je6V9qzEGxAmZTWaB">
 
 ## Approach
 
@@ -33,7 +35,9 @@ Coming soon...
 
 ## Quickstart
 
-- Clone the repository using the following command:
+- Navigate to http://babbel-neos-calculator.herokuapp.com/ 
+
+- Alternatively, clone the repository using the following command:
 
 ```
 $ git clone https://github.com/serenahathi/js-refresher.git
@@ -41,6 +45,9 @@ $ git clone https://github.com/serenahathi/js-refresher.git
 
 - Open the index.html file in your browser of choice
 
-## Resources consulted
+## Current limitations
+- Currently the calculator cannot handle complex calculations and does not follow the conventions of BODMAS
 
-- [FreeCodeCamp article](https://medium.freecodecamp.org/programming-a-calculator-8263966a8019)
+## Learnings
+
+- Better planning of deliverables before writing code
