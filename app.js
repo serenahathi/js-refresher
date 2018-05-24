@@ -6,7 +6,7 @@ $(document).ready(function() {
     let total = '';
 
     $('button').on('click', function(e) {
-        let button = e.target.innerHTML;
+        let button = e.target.innerHTML; //assign clicked button value
         if (button >= '0' && button <= 9) {
             handleNumber(button);
             console.log('number')
@@ -14,7 +14,7 @@ $(document).ready(function() {
             handleOperator(button);
             console.log('operator')
         }
-        console.log('e', e.target.innerHTML);
+        console.log(e.target.innerHTML);
     });
 
     function handleNumber(number) {
@@ -23,17 +23,22 @@ $(document).ready(function() {
         } else {
             secondNumber = number;
         }
-        displayButton(number)
+        displayButton(number) //puts value to display
     }
     
     function handleOperator(operator) {
-        if (calcOperation === '') {
-            calcOperation = operator
-        } else {
+        if (operator !== 'C'){
+             if (calcOperation === '') {
+                calcOperation = operator
+            } else {
             handleTotal();
             calcOperation = operator;
+            }
+        } else {
+            clearValues()
         }
     }
+
 
     function handleTotal() {
         switch (calcOperation) {
@@ -66,7 +71,15 @@ $(document).ready(function() {
         secondNumber = '';
     }
 
-    function clearValues(button) {
-        
+    function clearValues() { //C
+        if (firstNumber !== '' && secondNumber === '') {
+            firstNumber = '0';
+            displayButton(firstNumber);
+            updateVariables();
+        } else if (firstNumber !== '' && secondNumber !== '') {
+            secondNumber = '0';
+            displayButton(secondNumber);
+        }
     }
+
 });
