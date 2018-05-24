@@ -18,6 +18,8 @@ $(document).ready(function() {
         let button = e.target.innerHTML;
         if (button == "AC") {
             clearAllValues();
+        } else if (button == "C") {
+            clearValues();
         } else if (button == "=") {
             handleTotal();
         } else {
@@ -31,6 +33,17 @@ $(document).ready(function() {
           total = '0';
           calcOperation = null;
           displayButton(total);
+      }
+
+      function clearValues() {
+          if (firstNumber !== '' && secondNumber === '') {
+              firstNumber = '';
+              displayButton(firstNumber);
+              updateVariables();
+          } else if (firstNumber !== '' && secondNumber !== '') {
+              secondNumber = '';
+              displayButton(secondNumber);
+          }
       }
 
       function handleFirstNumber(number) {
