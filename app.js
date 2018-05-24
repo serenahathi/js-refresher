@@ -7,6 +7,7 @@ $(document).ready(function() {
 
     $('button').on('click', function(e) {
         let button = e.target.innerHTML;
+        console.log(button)
         if (button >= '0' && button <= 9) {
             handleNumber(button);
             console.log('number')
@@ -55,11 +56,7 @@ $(document).ready(function() {
                 break;
         }
         updateVariables();
-<<<<<<< HEAD
     }   
-=======
-    }
->>>>>>> css
 
     function displayButton(button) {
         $('.calculator-result-input').text(button);
