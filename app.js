@@ -25,7 +25,7 @@ $(document).ready(function() {
         }
         displayButton(number)
     }
-    
+
     function handleOperator(operator) {
         if (calcOperation === '') {
             calcOperation = operator
@@ -55,7 +55,11 @@ $(document).ready(function() {
                 break;
         }
         updateVariables();
+<<<<<<< HEAD
     }   
+=======
+    }
+>>>>>>> css
 
     function displayButton(button) {
         $('.calculator-result-input').text(button);
