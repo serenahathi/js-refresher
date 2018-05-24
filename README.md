@@ -8,7 +8,7 @@ A basic calculator application that can add, subtract, multiply and divide a ser
 
 View deployed version [here](http://babbel-neos-calculator.herokuapp.com/).
 
-<img src="https://giphy.com/gifs/7Je6V9qzEGxAmZTWaB">
+<img src="https://media.giphy.com/media/Air7Wv1twJh8L9AJ0z/giphy.gif" width="50%" height="50%" />
 
 ## Approach
 
@@ -45,7 +45,8 @@ $ git clone https://github.com/serenahathi/js-refresher.git
 
 - Open the index.html file in your browser of choice
 
-## Current limitations
+## Current limitations
+
 - Currently the calculator cannot handle complex calculations and does not follow the conventions of BODMAS
 
 ## Learnings
