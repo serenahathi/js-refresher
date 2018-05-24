@@ -15,15 +15,24 @@ $(document).ready(function() {
       });
   
       $(".operators button").on("click", function(e) {
-        let operator = e.target;
         let button = e.target.innerHTML;
-        if (button !== "=") {
-          $(this).addClass("active");
+        if (button == "AC") {
+            clearAllValues();
         } else if (button == "=") {
-          handleTotal();
+            handleTotal();
+        } else {
+            $(this).addClass("active");
         }
       });
   
+      function clearAllValues() {
+          firstNumber = '';
+          secondNumber = '';
+          total = '0';
+          calcOperation = null;
+          displayButton(total);
+      }
+
       function handleFirstNumber(number) {
         firstNumber = firstNumber + number;
         displayButton(firstNumber)
@@ -71,4 +80,3 @@ $(document).ready(function() {
           $(".active").removeClass()
       };
   });
-  
